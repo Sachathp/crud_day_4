@@ -18,12 +18,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <header>
-  <p> <%= link_to "Team", team_path  %> <%= link_to "Contact", contact_path %> <%= link_to "Home", home_path %> </p>
   
-  </header>
 
-  <body>
+  <body data-turbo="false">
+    <header>
+      <p> 
+        <%= link_to "Team", team_path  %> <%= link_to "Contact", contact_path %> <%= link_to "Home", home_path %> 
+      </p>
+    </header>
+
     <%= yield %>
   </body>
 </html>
