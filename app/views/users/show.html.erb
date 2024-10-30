@@ -14,7 +14,7 @@ Email : <%= @user.email %>
 Age : <%= @user.age %>
 </p>
 <p>
-Ville : <%= @user.city.name %>
+Ville : <%= link_to @user.city.name, city_path(@user.city.id) %>
 </p>
 <p>
 Description : <%= @user.description %>

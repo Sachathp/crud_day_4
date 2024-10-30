@@ -12,3 +12,7 @@ Contenu : <%= @gossip.content %>
 <p>
 Créer le : <%= @gossip.created_at %>
 </p>
+<p>
+Créer à <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id) %>
+
+</p>

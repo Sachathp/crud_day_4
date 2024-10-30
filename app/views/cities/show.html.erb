@@ -2,11 +2,12 @@
 
 <p>
 
-    <% @city.each do |gossip| %>
+<% @gossips.each do |gossip| %>
+  <li>
+    <strong><%= gossip.title %></strong> par <%= gossip.user.first_name %><br>
+    <p><%= gossip.content %></p>
+  </li>
+<% end %>
    
-      <h3><%= link_to gossip.title, gossip_path(gossip) %></h3>
-      <p>Écrit par : <%= gossip.user&.first_name  %></p>
-
-    <% end %>
 </p>
 
