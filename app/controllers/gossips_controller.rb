@@ -1,6 +1,7 @@
 
 class GossipsController < ApplicationController
   def new
+    @gossip = Gossip.new
   end
   
   
@@ -14,7 +15,7 @@ class GossipsController < ApplicationController
       p "#"*50
       p "sur le if RAS"
     else
-      render :new
+      render new_gossip_path 
     end
   end
 
