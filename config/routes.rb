@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :gossips, only: [:new, :create, :show, :index]
   resources :users 
+  resources :cities
   # Defines the root path route ("/")
   # root "posts#index"
  

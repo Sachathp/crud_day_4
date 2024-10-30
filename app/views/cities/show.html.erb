@@ -1,0 +1,12 @@
+<h1> Ville : <%= params[:id]%></h1> 
+
+<p>
+
+    <% @city.each do |gossip| %>
+   
+      <h3><%= link_to gossip.title, gossip_path(gossip) %></h3>
+      <p>Écrit par : <%= gossip.user&.first_name  %></p>
+
+    <% end %>
+</p>
+
