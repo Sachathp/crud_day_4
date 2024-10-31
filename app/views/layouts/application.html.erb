@@ -23,8 +23,16 @@
   <body data-turbo="false">
     <header>
       <p> 
-        <%= link_to "Team", team_path  %> <%= link_to "Contact", contact_path %> <%= link_to "Home", home_path %> 
+        <%= link_to "Team", team_path  %> <%= link_to "Contact", contact_path %> <%= link_to "Home", home_path %> <%= link_to 'Créer un utilisateur', new_user_path %>
+
       </p>
+      <% flash.each do |key, value| %>
+        <div class="<%= key %>"><%= value %></div>
+      <% end %>
+      
+        
+          <%= link_to 'Connexion', new_session_path %>  
+        
     </header>
 
     <%= yield %>

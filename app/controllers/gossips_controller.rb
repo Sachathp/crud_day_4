@@ -22,4 +22,23 @@ class GossipsController < ApplicationController
   def show
     @gossip = Gossip.find(params[:id])
   end
+
+  def edit 
+    @gossip = Gossip.find(params[:id])
+  end
+
+  def update
+    @gossip = Gossip.find(params[:id])
+    if @gossip.update(title: params[:gossip][:title], content: params[:gossip][:content])
+      redirect_to @gossip
+    else
+      render :edit
+    end
+  end
+
+  def destroy 
+    @gossip = Gossip.find(params[:id])
+    @gossip.destroy
+    redirect_to gossips_path
+  end
 end

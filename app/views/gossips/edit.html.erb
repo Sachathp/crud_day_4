@@ -1,0 +1,14 @@
+<h1> Modifie ton potins </h1>
+
+<%= form_with model: @gossip, method: :patch do |form| %>
+    <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+  
+    <%= form.label :title %>
+    <%= form.text_field :title, value: @gossip.title %>
+    
+    <%= form.label :content %>
+    <%= form.text_area :content, value: @gossip.content %>
+  
+    <%= form.submit "Valider", data: { confirm: "Tu es sûr?" } %>
+  <% end %>
+  

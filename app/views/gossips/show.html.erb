@@ -14,5 +14,10 @@ Créer le : <%= @gossip.created_at %>
 </p>
 <p>
 Créer à <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id) %>
+<p>
+<%= link_to "supprimer le gossip", gossip_path(@gossip), method: :delete %>
+
 
 </p>
+
+

@@ -1,0 +1,32 @@
+<h1>Créer un utilisateur</h1>
+
+<%= form_with model: @user, local: true do |f| %>
+  
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+
+     <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+
+     <%= f.label :age %>
+    <%= f.text_field :age %>
+  
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+
+      
+    <%= f.label :city_id %> <!-- Assurez-vous d'utiliser l'ID de la ville -->
+    <%= f.collection_select :city_id, City.all, :id, :name, { prompt: 'Sélectionnez une ville' }, required: true %> <!-- Utilisez une liste déroulante pour sélectionner une ville -->
+  
+ 
+
+  <div>
+    <%= f.submit "Créer" %>
+  </div>
+<% end %>
