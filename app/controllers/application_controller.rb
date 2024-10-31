@@ -17,5 +17,4 @@ class ApplicationController < ActionController::Base
       redirect_to login_path, alert: "Veuillez vous connecter pour continuer."
     end
   end
-
 end

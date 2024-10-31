@@ -23,7 +23,7 @@ class GossipsController < ApplicationController
     @gossip = Gossip.find(params[:id])
   end
 
-  def edit 
+  def edit
     @gossip = Gossip.find(params[:id])
   end
 
@@ -36,7 +36,7 @@ class GossipsController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy
     @gossip = Gossip.find(params[:id])
     @gossip.destroy
     redirect_to gossips_path

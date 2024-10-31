@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   # root plus page static:
   root "static_pages#home"
   get "/team", to: "static_pages#team"
@@ -15,7 +14,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   resources :sessions
-  resources :gossips 
+  resources :gossips
   resources :users
   resources :cities
   # Defines the root path route ("/")
